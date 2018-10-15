@@ -1,0 +1,403 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ------------------------------------------------------------------------------------------------
+GENERAL DIV LAYOUT STYLES 
+--------------------------------------------------------------------------------------------------- */
+
+*{margin:0; padding:0;} /* removes all margins and padding on all elements */
+
+body, html {
+background: transparent url(images/bg.jpg) top center; /*paper texture background */
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:10px;
+color:#000000;
+}
+
+div#container { /* constrains all other divs */
+width:890px;
+}
+
+div#nav { /* background image is black nav bar. holds nav link list */
+width:770px;
+height:60px;
+background:transparent url(images/navbar.png) no-repeat top center;
+text-align:center; /* center-aligns nav links within bar */
+}
+
+div#header { /* background image is plunket logo, header image is included in html */
+width:770px;
+height:268px;
+background: transparent url(images/logo.png) no-repeat top left;
+}
+
+div#headerhome {
+width:770px;
+height:299px;
+background: transparent url(images/logo.png) no-repeat top left;
+}
+
+div#content { /* holds content 'bricks' */
+width:100%;
+background:transparent url(images/bg.gif) repeat-y top left;
+
+}
+
+div#footer { /* holds bottom nav ul */
+width:770px;
+height:32px;
+background:transparent url(images/navbarbottom.png) no-repeat top left;
+text-align:center; /* center ul in navbar */
+}
+
+.center {
+margin:0 auto;
+}
+
+/* ------------------------------------------------------------------------------------------------ 
+CONTENT 'BRICKS' 
+--------------------------------------------------------------------------------------------------- */
+
+div.leftblock { /* gives left-hand date tab */
+width:60px;
+height:47px;
+float:left;
+text-align:center; /* center-aligns blog post date within tab */
+}
+
+div.datetab {
+background-image:url(images/datetab.jpg);
+}
+
+div.centerblock { /* contains actual brick content */
+width:465px;
+float:left;
+padding-bottom:30px;
+background-color:#FFFFFF;
+}
+
+div.highlight { /* adds a green highlight to top left of div. used to highlight blog entries */
+background: #FFFFFF url(images/highlight.gif) no-repeat top left;
+}
+
+div.rightblock { /* contains included image */
+width:306px;
+height:60px;
+float:left;
+}
+
+div.clearer {
+width:100%;
+clear:left;
+}
+
+div.brick { /* holds leftblock, centerblock and rightblock for each brick in the content stack :) */
+width:890px;
+clear:left;
+}
+
+div#finalbrick { /* leaves space between content and footer - WILL also hold bottom drop shadow */
+width:890px;
+height:100px;
+clear:left;
+background:url(images/finalbrick.gif) no-repeat top left;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ 
+CONTENT TEXT STYLES 
+--------------------------------------------------------------------------------------------------- */
+
+h1 { /* h1 text used for page headers */
+font-size:22px;
+font-family:"Trebuchet MS";
+padding:0px 15px 10px 20px;
+}
+
+h2 { /* used for blog entry titles */
+font-size:18px;
+color:#000000;
+padding: 0 15px 15px 20px;
+}
+
+p#firstparagraph { /* text attributes for first intro paragraph on each page */
+font-size:14px;
+line-height:20px;
+padding: 0 30px 15px 20px;
+}
+
+p { /* general global p styling */
+font-size:12px;
+line-height:17px;
+padding:0 30px 15px 20px;
+}
+
+span.i {
+font-style:italic;
+}
+
+/* ------- page-specific colors for HEADER TEXT H1----------------------------------------*/
+div.home h1 { /* h1 color for home page */
+color:#019900;
+}
+
+div.about h1 { /* h1 color for about page */
+color:#0088DE;
+}
+
+div.parents h1 { /* h1 color for about page */
+color:#941B8F;
+}
+
+div.getinvolved h1 { /* h1 color for about page */
+color:#DF1313;
+}
+
+div.shop h1 { /* h1 color for about page */
+color:#DE9203;
+}
+
+/* ------- page-specific colors for FIRST PARAGRAPH text ---------------------------------*/
+div.home p#firstparagraph { /* sets home page first paragraph text color */
+color:#006600;
+}
+
+div.about p#firstparagraph { /* sets about page first paragraph text color */
+color:#1a71a4;
+}
+
+div.parents p#firstparagraph { /* sets about page first paragraph text color */
+color:#63509a;
+}
+
+div.getinvolved p#firstparagraph { /* sets about page first paragraph text color */
+color:#6B0E0E;
+}
+
+div.shop p#firstparagraph { /* sets about page first paragraph text color */
+color:#A06A05;
+}
+
+div.contact p#firstparagraph { /* sets about page first paragraph text color */
+color:#333333;
+}
+
+/* ------- page-specific colors for PARAGRAPH TEXT P -------------------------------------*/
+div.home p {/* text color for normal paragraphs on home/index page */
+color:#2B3625;
+}
+
+div.about p {/* text color for normal paragraphs on home/index page */
+color:#000033;
+}
+
+div.parents p {/* text color for normal paragraphs on home/index page */
+color:#000033;
+}
+
+div.getinvolved p {/* text color for normal paragraphs on home/index page */
+color:#330000;
+}
+
+div.shop p {/* text color for normal paragraphs on home/index page */
+color:#330000;
+}
+
+div.contact p {/* text color for normal paragraphs on home/index page */
+color:#666666;
+}
+
+/* ------- page-specific colors for LINKS ------------------------------------------------*/
+div.home a:link, div.home a:visited { /* links for home page */
+color:#009900;
+}
+
+div.home a:hover, div.home a:active { /* link hovers for home page */
+color:#FF3300;
+}
+
+div.about a:link, div.about a:visited { /* links for home page */
+color:#0033FF;
+}
+
+div.about a:hover, div.about a:active { /* link hovers for home page */
+color:#FF3300;
+}
+
+/* ------- extra styles for BLOG ---------------------------------------------------------*/
+span.category { /* category display above each blog entry */
+font-size:10px;
+padding-left:20px;
+}
+
+span.month { /* month displayed in left tab of blog posts */
+display:block;
+font-size:14px;
+font-weight:bold;
+line-height:50%;
+color:#FFFFFF;
+font-family:Arial, Helvetica, sans-serif;
+padding-top:10px;
+}
+
+span.date { /* number-date displayed in left tab of blog posts */
+display:block;
+font-size:22px;
+font-weight:bold;
+color:#FFFFFF;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ 
+NAVIGATION BAR STYLES 
+--------------------------------------------------------------------------------------------------- */
+a.navlink:link, a.navlink:visited, a.navlink:active {
+text-transform:uppercase;
+font-family:"Trebuchet MS",Verdana, Arial, Helvetica, sans-serif;
+font-size:17px;
+text-decoration:none;
+padding:0 15px; /* adds 15px spacing on either side of nav link (total 30px between links) */
+color:#CCCCCC;
+}
+
+a.navlink:hover {
+color:#FFFFFF;
+}
+
+ul.navigation{ /* navigation unordered list */
+padding-top:2px; /* aligns coloured tabs vertically inside navbar */
+}
+
+ul.navigation li{ /* navbar list items */
+display:inline; /* inline makes list horizontal, block allows width and/or height to be specified */
+list-style-type:none; /* removes bullets from list */
+}
+
+a.selected:link, a.selected:visited, a.selected:hover, a.selected:active {
+color:#FFFFFF;
+padding-bottom:10px;
+}
+
+div#footer a.selected {
+padding-bottom:6px;
+}
+
+a.homepage { /* creates green tab for home page */
+background:transparent url(images/tabhome.gif) top center repeat-x;
+}
+
+a.aboutpage { /* creates blue tab for about page */
+background:transparent url(images/tababout.gif) top center repeat-x;
+}
+
+a.parentspage { /* creates purple tab for parents page */
+background:transparent url(images/tabparents.gif) top center repeat-x;
+}
+
+a.getinvolvedpage { /* creates red tab for get involved page */
+background:transparent url(images/tabgetinvolved.gif) top center repeat-x;
+}
+
+a.shoppage { /* creates yellow tab for shop page */
+background:transparent url(images/tabshop.gif) top center repeat-x;
+}
+
+a.contactpage { /* creates grey-blue tab for contact page */
+background:transparent url(images/tabcontact.gif) top center repeat-x;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ 
+SUB-CATEGORY NAVIGATION STYLES 
+--------------------------------------------------------------------------------------------------- */
+
+ul#linklist {
+list-style-type:none;
+}
+
+ul#linklist li {
+margin:8px 0;
+}
+
+div#content a.submenu:link, div#content a.submenu:visited, div#content a.submenu:active {
+font-family:"Trebuchet MS",Verdana, Arial, Helvetica, sans-serif;
+font-size:16px;
+font-weight:bold;
+color:#FFFFFF;
+background-position:top right;
+text-decoration:none;
+text-transform:none;
+padding:3px 45px 3px 10px;
+height:28px;
+}
+
+/* ------- sub menu LINK BACKGROUND ------------------------------------------------------*/
+div.about a.submenu:link, div.about a.submenu:visited, div.about a.submenu:active { /* about page sublinks*/
+background-color:#0066CC;
+background-image:url(images/linkblue.jpg);
+}
+
+div.parents a.submenu:link, div.parents a.submenu:visited, div.parents a.submenu:active { /* parents page sublinks */
+background-color:#990099;
+background-image:url(images/linkpurple.jpg);
+}
+
+div.getinvolved a.submenu:link, div.getinvolved a.submenu:visited, div.getinvolved a.submenu:active { /* parents page sublinks */
+background-color:#990099;
+background-image:url(images/linkred.jpg);
+}
+
+/* ------- sub menu LINK HOVER ------------------------------------------------------------*/
+div.about a.submenu:hover { /* about submenu hover */
+background-image:url(images/linkbluehover.jpg);
+color:#FFFFFF;
+}
+
+div.parents a.submenu:hover { /* parents submenu hover */
+background-image:url(images/linkpurplehover.jpg);
+color:#FFFFFF;
+}
+
+div.getinvolved a.submenu:hover { /* parents submenu hover */
+background-image:url(images/linkredhover.jpg);
+color:#FFFFFF;
+}
+
+/* ------------------------------------------------------------------------------------------------ 
+CONTACT FORM STYLES 
+--------------------------------------------------------------------------------------------------- */
+#contactform {
+color:#333333;
+}
+
+.formlabel {
+padding-top:10px;
+padding-bottom:2px;
+font-size: 10px;
+display:block;
+color:#666666;
+}
+
+.forminput {
+width:300px;
+}
+
+.textarea {
+width:380px;
+height:200px;
+}
+
+.formbutton {
+margin:10px 0;
+display:block;
+width:100px;
+}
+
+fieldset {
+padding:10px 20px;
+margin:0 20px;
+border:1px solid #999999;
+font-size:12px;
+color:#333333;
+}
